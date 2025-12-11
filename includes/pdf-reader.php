@@ -36,7 +36,7 @@ function pdftr_extract_text_from_pdf( $pdf_path, &$error = null ) {
     $text = '';
     if ( preg_match_all( '/\((.*?)\)\s*Tj/s', $content, $matches ) ) {
         foreach ( $matches[1] as $m ) {
-            $text .= preg_replace( '/\\\([()])/', '$1', $m );
+            $text .= preg_replace( '/\\\\([()])/', '$1', $m );
         }
     }
 
