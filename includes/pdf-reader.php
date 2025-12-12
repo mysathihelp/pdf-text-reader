@@ -8,7 +8,16 @@ function pdftr_extract_text_from_pdf( $pdf_path, &$error = null ) {
         return false;
     }
 
-    $pdftotext = trim( shell_exec( 'which pdftotext 2>/dev/null' ) );
+   if(function_exists('shell_exec')){
+    $output = shell_exec("pdftotext ...");
+} else {
+    // fallback to PHP parser
+    require 'vendor/autoload.php';
+    $parser = new Smalot\PdfParser\Parser();
+    $pdf    = $parser->parseFile($pdf_path);
+    $output = $pdf->getText();
+}
+
     if ( ! empty( $pdftotext ) ) {
         $txt_path = $pdf_path . '.txt';
         $cmd = escapeshellcmd( $pdftotext ) . ' -layout ' . escapeshellarg( $pdf_path ) . ' ' . escapeshellarg( $txt_path ) . ' 2>&1';
