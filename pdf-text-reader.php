@@ -3,9 +3,9 @@
 Plugin Name: PDF Text Reader
 Plugin URI:  https://github.com/yourusername/pdf-text-reader
 Description: Upload a biodata PDF in admin and extract & display its text below the upload form (testing/demo plugin).
-Version:     1.0.0
-Author:      Your Name
-Author URI:  https://github.com/yourusername
+Version:     1.1.1
+Author:      Smart Technologies
+Author URI:  https://github.com/mysathihelp
 License:     GPL2
 Text Domain: pdf-text-reader
 */
