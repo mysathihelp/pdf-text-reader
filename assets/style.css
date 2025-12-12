@@ -1,0 +1,4 @@
+.pdftr-wrap .form-table th { width: 200px; }
+.pdftr-output { background: #fff; border: 1px solid #ddd; padding: 12px; max-height: 400px; overflow: auto; white-space: pre-wrap; }
+.notice.success { padding: 8px 10px; background: #dff0d8; border-left: 4px solid #3c763d; }
+.notice.error { padding: 8px 10px; background: #f2dede; border-left: 4px solid #a94442; }
